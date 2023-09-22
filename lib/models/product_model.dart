@@ -6,7 +6,7 @@ class ProductModel {
   final String price;
 
   ProductModel({
-    this.image = Asset.image1,
+    this.image = Asset.productImage1,
     this.label = "Honey lime combo",
     this.price = "2000",
   });

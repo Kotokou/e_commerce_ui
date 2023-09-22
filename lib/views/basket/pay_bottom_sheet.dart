@@ -38,25 +38,21 @@ class PayBottomSheet extends StatelessWidget {
                     topRight: Radius.circular($styles.insets.sm),
                   ),
                 ),
-                child: SingleChildScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const CustomTextField(
-                        label: LocalStrings.deliveryAddress,
-                        hintText: LocalStrings.addressHintText,
-                      ),
-                      SizedBox(height: 3.h),
-                      const CustomTextField(
-                        label: LocalStrings.phoneNumber,
-                        hintText: LocalStrings.phoneNumberHintText,
-                      ),
-                      SizedBox(height: 1.h),
-                      const BottomSheetBottom(),
-                      SizedBox(height: 2.h),
-                    ],
-                  ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const CustomTextField(
+                      label: LocalStrings.deliveryAddress,
+                      hintText: LocalStrings.addressHintText,
+                    ),
+                    SizedBox(height: 3.h),
+                    const CustomTextField(
+                      label: LocalStrings.phoneNumber,
+                      hintText: LocalStrings.phoneNumberHintText,
+                    ),
+                    SizedBox(height: 3.h),
+                    const BottomSheetBottom(),
+                  ],
                 ),
               ),
             ),

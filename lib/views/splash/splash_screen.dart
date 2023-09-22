@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed($styles.times.slow).then(
-      (value) => Navigator.of(context).push(
+      (value) => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (_) => const WelcomeScreen(),
         ),

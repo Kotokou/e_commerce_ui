@@ -1,8 +1,6 @@
 import 'package:e_commerce_ui/views/splash/splash_screen.dart';
-import 'package:e_commerce_ui/views/theme/app_style.dart';
 import 'package:e_commerce_ui/views/theme/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 
 class App extends StatelessWidget {
@@ -10,10 +8,6 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemUiOverlayStyle(
-      statusBarColor: $styles.colors.primary,
-      statusBarIconBrightness: Brightness.light,
-    );
     return Sizer(
       builder: (BuildContext context, Orientation orientation,
           DeviceType deviceType) {

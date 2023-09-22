@@ -1,4 +1,6 @@
+import 'package:e_commerce_ui/views/theme/app_style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AppTheme {
   static ColorScheme lightColorScheme = const ColorScheme(
@@ -69,8 +71,24 @@ class AppTheme {
     scrim: Color(0xFF000000),
   );
 
-  static ThemeData lightTheme =
-      ThemeData(useMaterial3: true, colorScheme: lightColorScheme);
-  static ThemeData darkTheme =
-      ThemeData(useMaterial3: true, colorScheme: darkColorScheme);
+  static ThemeData lightTheme = ThemeData(
+    useMaterial3: true,
+    colorScheme: lightColorScheme,
+    appBarTheme: AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: $styles.colors.primary,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    ),
+  );
+  static ThemeData darkTheme = ThemeData(
+    useMaterial3: true,
+    colorScheme: darkColorScheme,
+    appBarTheme: AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: $styles.colors.primary,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    ),
+  );
 }

@@ -79,7 +79,7 @@ class WelcomeScreen extends StatelessWidget {
       bottomNavigationBar: LandingBottomButton(
         label: LocalStrings.welcomeButton,
         onTap: () {
-          Navigator.of(context).push(
+          Navigator.of(context).pushReplacement(
             MaterialPageRoute(
               builder: (context) => const AuthScreen(),
             ),

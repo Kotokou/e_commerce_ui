@@ -20,11 +20,11 @@ class PayWithCardBottomSheet extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              top: 15.h,
+              top: 10.h,
               left: 0,
               right: 0,
               child: Container(
-                height: 85.h,
+                height: 90.h,
                 margin: EdgeInsets.only(top: 25.h),
                 padding: EdgeInsets.only(
                   top: 4.h,
@@ -73,58 +73,55 @@ class PayWithCardBottomSheet extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBox(height: 3.5.h),
+                      Container(
+                        height: 9.h,
+                        width: 100.w,
+                        decoration: BoxDecoration(
+                          color: $styles.colors.primary,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular($styles.insets.s),
+                          ),
+                        ),
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.all($styles.insets.xs),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular($styles.insets.xs),
+                                  ),
+                                ),
+                                backgroundColor: $styles.colors.white),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const SuccessfulyScreen(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              LocalStrings.completeOrder,
+                              style: $styles.text.descriptionMeduim.copyWith(
+                                color: $styles.colors.primary,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ),
             ),
             Positioned(
-              top: 30.h,
+              top: 25.h,
               left: 0,
               right: 0,
               child: const CloseCircle(),
-            ),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                height: 9.h,
-                width: 100.w,
-                decoration: BoxDecoration(
-                  color: $styles.colors.primary,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular($styles.insets.s),
-                  ),
-                ),
-                child: Center(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.all($styles.insets.xs),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular($styles.insets.xs),
-                          ),
-                        ),
-                        backgroundColor: $styles.colors.white),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const SuccessfulyScreen(),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      LocalStrings.completeOrder,
-                      style: $styles.text.descriptionMeduim.copyWith(
-                        color: $styles.colors.primary,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
             ),
           ],
         ),

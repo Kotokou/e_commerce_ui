@@ -19,9 +19,21 @@ class OrderListItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image.asset(
-          orderModel.productModel.image,
+        Container(
+          height: 10.h,
           width: 20.w,
+          decoration: BoxDecoration(
+            shape: BoxShape.rectangle,
+            color: orderModel.color,
+            borderRadius: BorderRadius.all(
+              Radius.circular($styles.insets.xs),
+            ),
+          ),
+          child: Image.asset(
+            orderModel.productModel.image,
+            width: 15.w,
+            height: 8.h,
+          ),
         ),
         SizedBox(width: $styles.insets.sm),
         Column(

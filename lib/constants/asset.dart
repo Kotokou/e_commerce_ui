@@ -20,10 +20,14 @@ class Asset {
   static const String authImage = "assets/images/auth_image.png";
   static const String welcomeImage = "assets/images/welcome_image.png";
 
-  static const String image1 = "assets/images/image_1.png";
-  static const String image2 = "assets/images/image_2.png";
-  static const String image3 = "assets/images/image_3.png";
-  static const String image4 = "assets/images/image_4.png";
+  static const String imageOrder1 = "assets/images/image_1.png";
+  static const String imageOrder2 = "assets/images/image_2.png";
+  static const String imageOrder3 = "assets/images/image_3.png";
+
+  static const String productImage1 = "assets/images/product_image_1.png";
+  static const String productImage2 = "assets/images/product_image_2.png";
+  static const String productImage3 = "assets/images/product_image_3.png";
+
   static const String detailImage1 = "assets/images/detail_image_1.png";
   static const String customerOrder = "assets/images/customer_order.png";
   static const String deliveryMan = "assets/images/delivery_man.png";

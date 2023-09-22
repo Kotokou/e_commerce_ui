@@ -28,7 +28,7 @@ class BasketScreen extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: List.generate(
-                      4,
+                      3,
                       (index) => Column(
                         children: [
                           OrderListItem(

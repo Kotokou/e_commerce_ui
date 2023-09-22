@@ -100,7 +100,7 @@ class _AuthScreenState extends State<AuthScreen> {
       bottomNavigationBar: LandingBottomButton(
         label: LocalStrings.authButton,
         onTap: () {
-          Navigator.of(context).push(
+          Navigator.of(context).pushReplacement(
             MaterialPageRoute(
               builder: (context) => const HomeScreen(),
             ),

@@ -1,3 +1,4 @@
+import 'package:e_commerce_ui/common_wigets/landing_bottom_button.dart';
 import 'package:e_commerce_ui/constants/asset.dart';
 import 'package:e_commerce_ui/constants/local_strings.dart';
 import 'package:e_commerce_ui/utils/custom_images.dart';
@@ -19,58 +20,55 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: $styles.colors.white,
-      body: Column(
-        children: [
-          Container(
-            height: 55.h,
-            width: 100.w,
-            color: $styles.colors.primary,
-            child: Stack(
-              children: [
-                Positioned(
-                  top: 120,
-                  right: 38,
-                  child: Image.asset(Asset.brand),
-                ),
-                Positioned(
-                  top: 150,
-                  left: 38.sp,
-                  right: 38.sp,
-                  child: Image.asset(Asset.authImage),
-                ),
-                Positioned(
-                  top: 280,
-                  left: 38.sp,
-                  right: 38.sp,
-                  child: CustomImages.brand(
-                    image: Asset.svgAuthBrand,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              height: 55.h,
+              width: 100.w,
+              color: $styles.colors.primary,
+              child: Stack(
+                children: [
+                  Positioned(
+                    top: 14.1.h,
+                    right: 38.sp,
+                    child: Image.asset(Asset.brand),
                   ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: 45.h,
-            width: 100.w,
-            padding: EdgeInsets.only(
-              top: 60,
-              left: 24.sp,
-              right: 24.sp,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  LocalStrings.welcomeLabel,
-                  style: $styles.text.labelRegular.copyWith(
-                    color: $styles.colors.textColor,
-                    letterSpacing: -.2,
+                  Positioned(
+                    top: 17.63.h,
+                    left: 38.sp,
+                    right: 38.sp,
+                    child: Image.asset(Asset.authImage),
                   ),
-                ),
-                const SizedBox(height: 16),
-                SizedBox(
-                  height: 56,
-                  child: TextFormField(
+                  Positioned(
+                    top: 32.9.h,
+                    left: 38.sp,
+                    right: 38.sp,
+                    child: CustomImages.brand(
+                      image: Asset.svgAuthBrand,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: 7.05.h,
+                left: 24.sp,
+                right: 24.sp,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    LocalStrings.welcomeLabel,
+                    style: $styles.text.labelRegular.copyWith(
+                      color: $styles.colors.textColor,
+                      letterSpacing: -.2,
+                    ),
+                  ),
+                  SizedBox(height: $styles.insets.s),
+                  TextFormField(
                     controller: controller,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(
@@ -93,39 +91,21 @@ class _AuthScreenState extends State<AuthScreen> {
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(height: 42),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: $styles.colors.primary,
-                    minimumSize: const Size.fromHeight(56),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.sp),
-                      ),
-                    ),
-                  ),
-                  onPressed: () {
-                    if (controller.text.isNotEmpty) {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
-                        ),
-                      );
-                    }
-                  },
-                  child: Text(
-                    LocalStrings.authButton,
-                    style: $styles.text.buttonTitle.copyWith(
-                      color: $styles.colors.white,
-                    ),
-                  ),
-                ),
-                const Spacer(),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
+      ),
+      bottomNavigationBar: LandingBottomButton(
+        label: LocalStrings.authButton,
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const HomeScreen(),
+            ),
+          );
+        },
       ),
     );
   }

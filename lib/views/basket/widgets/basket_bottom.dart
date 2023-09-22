@@ -41,9 +41,15 @@ class BasketBottom extends StatelessWidget {
           CustomButton(
             label: LocalStrings.checkout,
             onTap: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (context) => const PayBottomSheet(),
+              Scaffold.of(context).showBottomSheet(
+                backgroundColor: $styles.colors.black.withOpacity(0.25),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.zero),
+                ),
+                elevation: 0,
+                (context) {
+                  return const PayBottomSheet();
+                },
               );
             },
           ),

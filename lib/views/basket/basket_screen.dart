@@ -1,6 +1,7 @@
+import 'package:e_commerce_ui/constants/local_strings.dart';
 import 'package:e_commerce_ui/utils/database.dart';
 import 'package:e_commerce_ui/views/basket/widgets/basket_bottom.dart';
-import 'package:e_commerce_ui/views/basket/widgets/basket_header.dart';
+import 'package:e_commerce_ui/common_wigets/custom_header.dart';
 import 'package:e_commerce_ui/views/basket/widgets/order_list_item.dart';
 import 'package:e_commerce_ui/views/theme/app_style.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class BasketScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const BasketHeader(),
+            const CustomHeader(title: LocalStrings.myBasket),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.only(
@@ -41,10 +42,10 @@ class BasketScreen extends StatelessWidget {
                 ),
               ),
             ),
+            const BasketBottom(),
           ],
         ),
       ),
-      bottomNavigationBar: const BasketBottom(),
     );
   }
 }

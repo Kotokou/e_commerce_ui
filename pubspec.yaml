@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^2.0.7
   sizer:
   google_fonts: ^6.0.0
+  dotted_line: ^3.2.2
 
 dev_dependencies:
   flutter_test:

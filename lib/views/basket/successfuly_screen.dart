@@ -1,5 +1,7 @@
 import 'package:e_commerce_ui/constants/local_strings.dart';
+import 'package:e_commerce_ui/views/home/home_screen.dart';
 import 'package:e_commerce_ui/views/theme/app_style.dart';
+import 'package:e_commerce_ui/views/track/track_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -76,11 +78,18 @@ class SuccessfulyScreen extends StatelessWidget {
                 ),
                 backgroundColor: $styles.colors.primary,
                 padding: EdgeInsets.symmetric(
-                  vertical: $styles.insets.sm,
+                  vertical: $styles.insets.s,
                   horizontal: 15.w,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TrackOrderScreen(),
+                  ),
+                );
+              },
               child: Text(
                 LocalStrings.trackOrder,
                 style: $styles.text.labelMeduim.copyWith(
@@ -101,7 +110,14 @@ class SuccessfulyScreen extends StatelessWidget {
                   horizontal: 20.w,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
+                  (route) => false,
+                );
+              },
               child: Text(
                 LocalStrings.continueShopping,
                 style: $styles.text.descriptionMeduim.copyWith(

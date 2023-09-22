@@ -41,4 +41,17 @@ class LocalStrings {
   static const String phoneNumberHintText = "09090605708";
   static const String payOnDelivery = "Pay on delivery";
   static const String payWithCard = "Pay with card";
+  static const String cardHoldersName = 'Card Holders Name';
+  static const String cardHoldersNameHintText = 'Adolphus Chris';
+  static const String cardNumber = 'Card Number';
+  static const String cardNumberHintText = '1234 5678 9012 1314';
+  static const String date = 'Date';
+  static const String dateHintText = '10/30';
+  static const String ccvHintText = '123';
+  static const String ccv = 'CCV';
+  static const String completeOrder = "Complete order";
+  static const orderTaken = "Order Taken";
+  static const String orderPrepared = 'Order Is Being Prepared';
+  static const String agentIsComming = 'Your delivery agent is comming';
+  static const String orderReceived = "Order Received";
 }

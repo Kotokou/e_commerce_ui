@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 final $styles = AppStyle();
@@ -23,72 +24,61 @@ class AppStyle {
 
 @immutable
 class _Text {
-  late final TextStyle splashLabel = const TextStyle(
-    fontFamily: 'Bad Script',
+  late final TextStyle splashLabel = GoogleFonts.badScript(
     fontSize: 24,
     fontWeight: FontWeight.normal,
   );
-  late final TextStyle largeLabelSemiMeduim = const TextStyle(
-    fontFamily: 'Josefin Sans',
-    fontSize: 24,
-    fontWeight: FontWeight.w500,
-  );
 
-  late final TextStyle bigLabelMeduim = const TextStyle(
-    fontFamily: 'Josefin Sans',
+  late final TextStyle bigLabelMeduim = GoogleFonts.josefinSans(
     fontSize: 32,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.normal,
   );
 
-  late final TextStyle buttonTitle = const TextStyle(
-    fontFamily: 'Josefin Sans',
+  late final TextStyle buttonTitle = GoogleFonts.josefinSans(
     fontSize: 16,
     fontWeight: FontWeight.w700,
   );
 
-  late final TextStyle labelMeduim = const TextStyle(
-    fontFamily: 'Josefin Sans',
+  late final TextStyle labelMeduim = GoogleFonts.josefinSans(
     fontSize: 20,
     fontWeight: FontWeight.w700,
   );
 
-  late final TextStyle largeLabelMeduim = const TextStyle(
-    fontFamily: 'Josefin Sans',
+  late final TextStyle largeLabelMeduim = GoogleFonts.josefinSans(
     fontSize: 24,
     fontWeight: FontWeight.w700,
   );
 
-  late final TextStyle labelRegular = const TextStyle(
-    fontFamily: 'Josefin Sans',
+  late final TextStyle labelRegular = GoogleFonts.josefinSans(
     fontSize: 20,
     fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w400,
-  );
-
-  late final TextStyle descriptionRegular = const TextStyle(
-    fontFamily: 'Josefin Sans',
-    fontSize: 16,
-    fontWeight: FontWeight.w400,
-    fontStyle: FontStyle.normal,
-  );
-
-  late final TextStyle smallDescriptionRegular = const TextStyle(
-    fontFamily: 'Josefin Sans',
-    fontSize: 14,
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w400,
-  );
-
-  late final TextStyle descriptionMeduim = const TextStyle(
-    fontFamily: 'Josefin Sans',
-    fontSize: 16,
     fontWeight: FontWeight.w500,
   );
 
-  late final TextStyle smallLabelRegular = const TextStyle(
-    fontFamily: 'Josefin Sans',
+  late final TextStyle descriptionRegular = GoogleFonts.josefinSans(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+  );
+
+  late final TextStyle smallDescriptionRegular = GoogleFonts.josefinSans(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+  );
+
+  late final TextStyle descriptionMeduim = GoogleFonts.josefinSans(
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+  );
+
+  late final TextStyle smallLabelRegular = GoogleFonts.josefinSans(
     fontSize: 10,
     fontWeight: FontWeight.w400,
+  );
+
+  late final TextStyle largeLabelSemiMeduim = GoogleFonts.josefinSans(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
   );
 }
 

@@ -38,40 +38,43 @@ class PayWithCardBottomSheet extends StatelessWidget {
                     topRight: Radius.circular($styles.insets.sm),
                   ),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const CustomTextField(
-                      label: LocalStrings.cardHoldersName,
-                      hintText: LocalStrings.cardHoldersNameHintText,
-                    ),
-                    SizedBox(height: 3.h),
-                    const CustomTextField(
-                      label: LocalStrings.cardNumber,
-                      hintText: LocalStrings.cardNumberHintText,
-                    ),
-                    SizedBox(height: 3.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 40.w,
-                          child: const CustomTextField(
-                            label: LocalStrings.date,
-                            hintText: LocalStrings.dateHintText,
+                child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const CustomTextField(
+                        label: LocalStrings.cardHoldersName,
+                        hintText: LocalStrings.cardHoldersNameHintText,
+                      ),
+                      SizedBox(height: 3.h),
+                      const CustomTextField(
+                        label: LocalStrings.cardNumber,
+                        hintText: LocalStrings.cardNumberHintText,
+                      ),
+                      SizedBox(height: 3.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 40.w,
+                            child: const CustomTextField(
+                              label: LocalStrings.date,
+                              hintText: LocalStrings.dateHintText,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 30.w,
-                          child: const CustomTextField(
-                            label: LocalStrings.ccv,
-                            hintText: LocalStrings.ccvHintText,
+                          SizedBox(
+                            width: 30.w,
+                            child: const CustomTextField(
+                              label: LocalStrings.ccv,
+                              hintText: LocalStrings.ccvHintText,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

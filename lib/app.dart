@@ -1,3 +1,4 @@
+// import 'package:e_commerce_ui/views/basket/basket_screen.dart';
 import 'package:e_commerce_ui/views/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -18,6 +19,7 @@ class App extends StatelessWidget {
           darkTheme: AppTheme.darkTheme,
           themeMode: ThemeMode.dark,
           home: const SplashScreen(),
+          // home: const BasketScreen(),
         );
       },
     );

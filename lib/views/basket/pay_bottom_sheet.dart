@@ -28,8 +28,8 @@ class PayBottomSheet extends StatelessWidget {
                 margin: EdgeInsets.only(top: 25.h),
                 padding: EdgeInsets.only(
                   top: 4.h,
-                  left: $styles.insets.sm,
-                  right: $styles.insets.sm,
+                  left: $styles.insets.s,
+                  right: $styles.insets.s,
                 ),
                 decoration: BoxDecoration(
                   color: $styles.colors.white,

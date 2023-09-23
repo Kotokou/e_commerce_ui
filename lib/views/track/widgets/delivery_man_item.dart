@@ -25,7 +25,7 @@ class DeliveryManItem extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 5.w),
+        SizedBox(width: 3.w),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,14 +48,14 @@ class DeliveryManItem extends StatelessWidget {
         ),
         const Spacer(),
         Container(
-          height: $styles.insets.md,
-          width: $styles.insets.md,
+          height: $styles.insets.sm,
+          width: $styles.insets.sm,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: $styles.colors.primary,
           ),
           child: Padding(
-            padding: EdgeInsets.all($styles.insets.xs),
+            padding: EdgeInsets.all($styles.insets.xxs),
             child: SvgPicture.asset(Asset.callIcon),
           ),
         ),

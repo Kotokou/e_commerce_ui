@@ -29,7 +29,7 @@ class OrderTrackSuccessItem extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 5.w),
+        SizedBox(width: 3.w),
         Text(
           label,
           style: $styles.text.descriptionMeduim.copyWith(

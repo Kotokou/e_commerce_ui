@@ -44,7 +44,9 @@ class _DetailScreenState extends State<DetailScreen> {
                 children: [
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    children: [GoBack()],
+                    children: [
+                      GoBack(),
+                    ],
                   ),
                   Container(
                     height: 22.h,

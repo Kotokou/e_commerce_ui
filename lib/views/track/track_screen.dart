@@ -15,96 +15,91 @@ class TrackOrderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: $styles.colors.white,
-      body: SafeArea(
-        child: Column(
-          children: [
-            const CustomHeader(title: LocalStrings.myBasket),
-            Container(
-              height: 82.h,
-              width: 100.w,
-              padding: EdgeInsets.only(
-                left: 5.w,
-                right: 5.w,
-                top: 5.h,
-                bottom: 1.h,
-              ),
-              child: Stack(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: $styles.insets.md,
-                      vertical: $styles.insets.md,
-                    ),
-                    child: DottedLine(
-                      direction: Axis.vertical,
-                      dashColor: $styles.colors.primary,
-                      lineThickness: 3,
-                      dashGapLength: 1.5.h,
-                      dashLength: 4,
-                    ),
+      body: Column(
+        children: [
+          const CustomHeader(title: LocalStrings.myBasket),
+          Container(
+            height: 82.h,
+            width: 100.w,
+            padding: EdgeInsets.only(
+              left: 5.w,
+              right: 5.w,
+              top: 4.h,
+              bottom: 1.h,
+            ),
+            child: Stack(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: $styles.insets.md,
+                    vertical: $styles.insets.md,
                   ),
-                  SizedBox(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                  child: DottedLine(
+                    direction: Axis.vertical,
+                    dashColor: $styles.colors.primary,
+                    lineThickness: 3,
+                    dashGapLength: 1.5.h,
+                    dashLength: 4,
+                  ),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const OrderTrackSuccessItem(
+                      image: Asset.customerOrder,
+                      label: LocalStrings.orderTaken,
+                    ),
+                    SizedBox(height: 4.h),
+                    const OrderTrackSuccessItem(
+                      image: Asset.order,
+                      label: LocalStrings.orderPrepared,
+                    ),
+                    SizedBox(height: 4.h),
+                    const DeliveryManItem(),
+                    SizedBox(height: 2.h),
+                    ClipRRect(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular($styles.insets.lm),
+                      ),
+                      child: Image.asset(
+                        Asset.map,
+                        height: 20.h,
+                        width: 90.w,
+                      ),
+                    ),
+                    SizedBox(height: 6.h),
+                    Row(
                       children: [
-                        const OrderTrackSuccessItem(
-                          image: Asset.customerOrder,
-                          label: LocalStrings.orderTaken,
-                        ),
-                        SizedBox(height: 5.h),
-                        const OrderTrackSuccessItem(
-                          image: Asset.order,
-                          label: LocalStrings.orderPrepared,
-                        ),
-                        SizedBox(height: 5.h),
-                        const DeliveryManItem(),
-                        SizedBox(height: 2.h),
                         Container(
-                          height: 20.h,
-                          width: double.infinity,
+                          height: 6.h,
+                          width: 2 * $styles.insets.md,
                           decoration: BoxDecoration(
-                            image: const DecorationImage(
-                              image: AssetImage(Asset.map),
+                            shape: BoxShape.circle,
+                            color: $styles.colors.green,
+                          ),
+                          child: Center(
+                            child: Icon(
+                              Icons.done_rounded,
+                              color: $styles.colors.white,
+                              size: $styles.insets.sm,
                             ),
-                            borderRadius:
-                                BorderRadius.circular($styles.insets.sm),
                           ),
                         ),
-                        SizedBox(height: 5.h),
-                        Row(
-                          children: [
-                            Container(
-                              height: 6.h,
-                              width: 10.h,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: $styles.colors.green,
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.done_rounded,
-                                  color: $styles.colors.white,
-                                  size: $styles.insets.sm,
-                                ),
-                              ),
-                            ),
-                            SizedBox(width: 5.w),
-                            Text(
-                              LocalStrings.orderReceived,
-                              style: $styles.text.descriptionMeduim.copyWith(
-                                color: $styles.colors.black,
-                              ),
-                            ),
-                          ],
+                        SizedBox(width: 5.w),
+                        Text(
+                          LocalStrings.orderReceived,
+                          style: $styles.text.descriptionMeduim.copyWith(
+                            color: $styles.colors.black,
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

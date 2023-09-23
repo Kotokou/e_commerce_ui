@@ -36,32 +36,37 @@ class OrderListItem extends StatelessWidget {
           ),
         ),
         SizedBox(width: $styles.insets.sm),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              orderModel.productModel.label,
-              style: $styles.text.descriptionMeduim.copyWith(
-                color: $styles.colors.black,
-              ),
-            ),
-            Text.rich(
-              TextSpan(
-                text: orderModel.qte.toString(),
-                style: $styles.text.smallDescriptionRegular.copyWith(
+        SizedBox(
+          width: 40.w,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                orderModel.productModel.label,
+                style: $styles.text.descriptionMeduim.copyWith(
                   color: $styles.colors.black,
                 ),
-                children: [
-                  TextSpan(
-                    text: LocalStrings.packs,
-                    style: $styles.text.smallDescriptionRegular.copyWith(
-                      color: $styles.colors.black,
-                    ),
-                  ),
-                ],
+                overflow: TextOverflow.ellipsis,
               ),
-            ),
-          ],
+              Text.rich(
+                TextSpan(
+                  text: orderModel.qte.toString(),
+                  style: $styles.text.smallDescriptionRegular.copyWith(
+                    color: $styles.colors.black,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: LocalStrings.packs,
+                      style: $styles.text.smallDescriptionRegular.copyWith(
+                        color: $styles.colors.black,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
         const Spacer(),
         CustomPrice(

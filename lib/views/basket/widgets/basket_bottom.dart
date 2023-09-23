@@ -12,7 +12,7 @@ class BasketBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: $styles.insets.s),
+      padding: EdgeInsets.symmetric(horizontal: $styles.insets.xs),
       height: 18.h,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

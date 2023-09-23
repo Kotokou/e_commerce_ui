@@ -165,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     $styles.gradients.productCardShadow,
                   ],
                 ),
-                height: 25.h,
+                height: 30.h,
                 child: ListView.separated(
                   itemCount: productList.length,
                   scrollDirection: Axis.horizontal,

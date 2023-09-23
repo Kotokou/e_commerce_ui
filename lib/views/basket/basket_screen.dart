@@ -22,8 +22,8 @@ class BasketScreen extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(
                   top: 7.h,
-                  left: $styles.insets.s,
-                  right: $styles.insets.s,
+                  left: $styles.insets.xs,
+                  right: $styles.insets.xs,
                 ),
                 child: SingleChildScrollView(
                   child: Column(

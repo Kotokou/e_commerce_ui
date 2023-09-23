@@ -14,7 +14,7 @@ class GoBack extends StatelessWidget {
       },
       child: Container(
         height: 5.h,
-        width: 25.w,
+        width: 27.w,
         padding: const EdgeInsets.symmetric(horizontal: 5),
         decoration: BoxDecoration(
           color: $styles.colors.white,

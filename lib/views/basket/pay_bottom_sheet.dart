@@ -12,7 +12,7 @@ class PayBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: $styles.colors.black.withOpacity(0.25),
+      color: Colors.transparent,
       child: Container(
         color: $styles.colors.black.withOpacity(0.25),
         height: 100.h,
@@ -41,17 +41,26 @@ class PayBottomSheet extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const CustomTextField(
-                      label: LocalStrings.deliveryAddress,
-                      hintText: LocalStrings.addressHintText,
+                    SizedBox(
+                      height: 15.h,
+                      child: const CustomTextField(
+                        label: LocalStrings.deliveryAddress,
+                        hintText: LocalStrings.addressHintText,
+                      ),
                     ),
-                    SizedBox(height: 3.h),
-                    const CustomTextField(
-                      label: LocalStrings.phoneNumber,
-                      hintText: LocalStrings.phoneNumberHintText,
+                    SizedBox(height: 2.h),
+                    SizedBox(
+                      height: 15.h,
+                      child: const CustomTextField(
+                        label: LocalStrings.phoneNumber,
+                        hintText: LocalStrings.phoneNumberHintText,
+                      ),
                     ),
-                    SizedBox(height: 3.h),
-                    const BottomSheetBottom(),
+                    SizedBox(height: 4.h),
+                    SizedBox(
+                      height: 9.h,
+                      child: const BottomSheetBottom(),
+                    ),
                   ],
                 ),
               ),

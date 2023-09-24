@@ -11,7 +11,7 @@ class BottomSheetBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 1.h),
+      padding: EdgeInsets.only(bottom: 1.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -60,7 +60,7 @@ class BottomSheetBottom extends StatelessWidget {
               Navigator.of(context).pop();
 
               Scaffold.of(context).showBottomSheet(
-                backgroundColor: $styles.colors.black.withOpacity(0.25),
+                backgroundColor: Colors.transparent,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.zero),
                 ),

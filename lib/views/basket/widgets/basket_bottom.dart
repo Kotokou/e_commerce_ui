@@ -42,7 +42,7 @@ class BasketBottom extends StatelessWidget {
             label: LocalStrings.checkout,
             onTap: () {
               Scaffold.of(context).showBottomSheet(
-                backgroundColor: $styles.colors.black.withOpacity(0.25),
+                backgroundColor: Colors.transparent,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.zero),
                 ),

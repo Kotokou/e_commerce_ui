@@ -12,7 +12,7 @@ class PayWithCardBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: $styles.colors.black.withOpacity(0.25),
+      color: Colors.transparent,
       child: Container(
         color: $styles.colors.black.withOpacity(0.25),
         height: 100.h,
@@ -42,39 +42,48 @@ class PayWithCardBottomSheet extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const CustomTextField(
-                      label: LocalStrings.cardHoldersName,
-                      hintText: LocalStrings.cardHoldersNameHintText,
+                    SizedBox(
+                      height: 15.h,
+                      child: const CustomTextField(
+                        label: LocalStrings.cardHoldersName,
+                        hintText: LocalStrings.cardHoldersNameHintText,
+                      ),
                     ),
                     SizedBox(height: 2.h),
-                    const CustomTextField(
-                      label: LocalStrings.cardNumber,
-                      hintText: LocalStrings.cardNumberHintText,
+                    SizedBox(
+                      height: 15.h,
+                      child: const CustomTextField(
+                        label: LocalStrings.cardNumber,
+                        hintText: LocalStrings.cardNumberHintText,
+                      ),
                     ),
                     SizedBox(height: 2.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 40.w,
-                          child: const CustomTextField(
-                            label: LocalStrings.date,
-                            hintText: LocalStrings.dateHintText,
+                    SizedBox(
+                      height: 15.h,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 40.w,
+                            child: const CustomTextField(
+                              label: LocalStrings.date,
+                              hintText: LocalStrings.dateHintText,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 30.w,
-                          child: const CustomTextField(
-                            label: LocalStrings.ccv,
-                            hintText: LocalStrings.ccvHintText,
+                          SizedBox(
+                            width: 30.w,
+                            child: const CustomTextField(
+                              label: LocalStrings.ccv,
+                              hintText: LocalStrings.ccvHintText,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     SizedBox(height: 2.h),
                     Container(
-                      height: 9.h,
+                      height: 8.h,
                       width: 100.w,
                       decoration: BoxDecoration(
                         color: $styles.colors.primary,
